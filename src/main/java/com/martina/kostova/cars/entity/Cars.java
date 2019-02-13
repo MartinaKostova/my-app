@@ -4,6 +4,9 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 
 import javax.persistence.*;
+import javax.validation.constraints.NotNull;
+import javax.validation.constraints.PositiveOrZero;
+import javax.validation.constraints.Size;
 
 //@data is Lombok annotation to create all the getter, setter,
 // equals, hash and toString methods based on the fields.
@@ -22,6 +25,8 @@ public class Cars {
     @Enumerated(EnumType.STRING)
     private Colour colour;
 
+    @NotNull(message = "Speed is a required field")
+    @PositiveOrZero
     private Integer speed;
 
     private String brand;
