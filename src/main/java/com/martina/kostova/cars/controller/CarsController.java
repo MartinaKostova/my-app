@@ -40,7 +40,6 @@ public class CarsController {
 
         Page<Cars> cars = repository.findAll(pageableRequest);
         List<Cars> carsEntities = cars.getContent();
-
         return carsEntities;
     }
 
