@@ -16,14 +16,14 @@ import org.springframework.context.annotation.Configuration;
 @Slf4j
 class LoadDatabase {
 
-    @Bean
-    CommandLineRunner initDatabase(CarsRepository repository) {
-        return args -> {
-            log.info("Preloading " + repository.save(new Cars(Colour.BLACK,20, "BMW", true)));
-            log.info("Preloading " + repository.save(new Cars(Colour.PINK,320, "AUDI", true)));
-            log.info("Preloading " + repository.save(new Cars(Colour.BLACK,27, "BMW", true)));
-            log.info("Preloading " + repository.save(new Cars(Colour.RED,50, "OPEL", true)));
-            log.info("Preloading " + repository.save(new Cars(Colour.RED,28, "VOLVO", true)));
-        };
-    }
+//    @Bean
+//    CommandLineRunner initDatabase(CarsRepository repository) {
+//        return args -> {
+//            log.info("Preloading " + repository.save(new Cars(Colour.BLACK,20, "BMW", true)));
+//            log.info("Preloading " + repository.save(new Cars(Colour.PINK,320, "AUDI", true)));
+//            log.info("Preloading " + repository.save(new Cars(Colour.BLACK,27, "BMW", true)));
+//            log.info("Preloading " + repository.save(new Cars(Colour.RED,50, "OPEL", true)));
+//            log.info("Preloading " + repository.save(new Cars(Colour.RED,28, "VOLVO", true)));
+//        };
+//    }
 }

@@ -17,7 +17,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 @RestController
-@RequestMapping("")
 public class CarsController {
 
     private final CarsRepository repository;
@@ -32,6 +31,7 @@ public class CarsController {
         return repository.findAll();
     }
 
+    @CrossOrigin(origins = "http://localhost:3000")
     @GetMapping("/cars")
     List<Cars> getCars(@RequestParam(value = "page", defaultValue = "0") int page,
                        @RequestParam(value = "limit", defaultValue = "30") int limit) {
